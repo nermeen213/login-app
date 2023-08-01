@@ -1,0 +1,17 @@
+main {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #24353F;
+}
+.group {
+    background-color: #24353F !important;
+}
+
+
+.navbar {
+    color: #24353F !important;
+   
+}
+h1 {
+    font-weight: 500px !important;
+}

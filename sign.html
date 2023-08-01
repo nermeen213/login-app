@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/sign.css">
+
+
+</head>
+<body>
+    <main class="main">
+        <div class="container overflow-hidden text-center" id="main">
+            <div class="group w-75 mx-auto m-5 p-5 bg-body-tertiary shadow-lg p-3 mb-5 bg-body rounded">
+                <h1>Smart Login System</h1>
+                <div class="input">
+                    <input type="text" id="userName" class="form-control my-3" placeholder="Enter Your Name" oninput="regexName()">
+                    <p class="alert alert-danger d-none" id="patterntwo">name is invalid</p>
+                </div>
+                <div class="input">
+                    <input type="email" id="userEmail" class="form-control my-3" placeholder="Enter Your Email" oninput="regexEmail()">
+                    <p class="alert alert-danger d-none" id="pattern">Email is invalid</p>
+                </div>
+                <div class="input">
+                    <input type="password" id="userPassword" class="form-control my-3" placeholder="Enter Your password">
+                </div>
+                
+                <button class="btn btn-outline-primary w-100 my-3" id="loginBtn" onclick="testData()">Login</button>
+                <p class="fs-5 text-warning d-none" id="suss">success</p>
+                <p class="text-danger d-none" id="exist">email already exists</p>
+
+                <p class="text-white fs-5">You have an account?
+                    <a class="text-bg-white" href="#" id="window">Sign in</a>
+                </p>
+
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/sign.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container overflow-hidden text-center" id="main">
+            <div class="group w-75 mx-auto m-5 p-5 bg-body-tertiary shadow-lg p-3 mb-5 bg-body rounded">
+                <h1>Smart Login System</h1>
+                <div class="input">
+                    <input id="emailUser"  type="email" class="form-control my-3" oninput="regexEmail()" placeholder="Enter Your Email">
+                    <p class="alert alert-danger d-none" id="pattern">Email is invalid</p>
+
+                </div>
+                <div class="input">
+                    <input id="passwordUser" type="password" class="form-control my-3" placeholder="Enter Your password">
+                    <p class="alert alert-danger d-none" id="patterntwo">Email is invalid</p>
+                </div>
+                <p id="font" class="d-none fs-5 text-danger">incorrect email or password</p>
+                <p id="incorrect" class="d-none"><span class="text-danger">All inputs is required</span></p>
+                <button class="btn btn-outline-info w-100 my-3" id="logBTN" onclick="testData()">Login</button>
+
+                <p class="text-white fs-5">Don’t have an account?
+                    <a class="text-bg-white" href="#" id="call">Sign in</a>
+                   
+                    
+                </p>
+
+            </div>
+
+        </div>
+    </main>
+    
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
