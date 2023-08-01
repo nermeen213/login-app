@@ -26,15 +26,15 @@ logincontainer=JSON.parse(localStorage.getItem("loginData"));
 
 
 function testData(){
-   if (regexEmail()==true){
+   if(regexEmail()==true){
       var current=emailInput.value;
-      var password =passwordInput.value;
+      
       let isCoprrect=true;
       
          
       if(logincontainer.length==0){
          var loginData={
-             name:usernameInput.value,
+           
              email:emailInput.value,
              password:passwordInput.value,
             }
@@ -46,7 +46,7 @@ function testData(){
       }else{
          for(var i=0 ;i<logincontainer.length;i++){
               
-            if(logincontainer[i].email==current && logincontainer[i].password==password){
+            if(logincontainer[i].email==current){
                 isCoprrect=true;
                 break;
    
@@ -61,14 +61,15 @@ function testData(){
    
    
         if(isCoprrect==true){
-         // logincontainer[i].name;
-         // localStorage.setItem("name",JSON.stringify(logincontainer));
+        
           window.location = './log.html'
           
          
    
         }else{
+         // alert("hello")
           document.getElementById('font').classList.remove('d-none')
+        
    
         }
    
@@ -79,17 +80,14 @@ function testData(){
              
           
    
-          
-          
+
+
    
-   
-      
-      clear()
-      
 
    }
-   
-  
+   clear()
+
+      
       
 }
 
@@ -106,41 +104,10 @@ function testData(){
 
 
 
-// btnLogin.addEventListener('click', function(){
-//    if (regexEmail()==true){
-//       var email = emailInput.value;
-//       var password=passwordInput.value;
-  
-  
-  
-     
-//        if(email.length == 0 || password.length==0){
-//          para.classList.remove("d-none")
-          
-          
-         
-//        }
-//        else {
-//           para.classList.add("d-none")
-//        }
-  
-//        var data ={
-//           email: emailInput.value ,
-//           password:passwordInput.value ,
-  
-//        }
-//        datacontainer.push(data);
-//        localStorage.setItem("datbase",JSON.stringify(datacontainer));
-//        console.log(datacontainer);
-  
-       
-  
-
-//    }
-   
 
 
-// });
+
+
 
 
 
@@ -154,8 +121,7 @@ function regexEmail(){
       emailInput.classList.add("is-valid")
       emailInput.classList.remove("is-invalid")
       pattern.classList.add("d-none")
-      message.classList.remove('d-none')
-      
+     
       return true;
 
    }
@@ -163,13 +129,12 @@ function regexEmail(){
       emailInput.classList.add("is-invalid")
       emailInput.classList.remove("is-valid")
       pattern.classList.remove("d-none")
-      message.classList.add('d-none')
+     
       return false;
 
    }
 
 
-   clear()
 }
 
 

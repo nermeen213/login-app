@@ -49,7 +49,10 @@ if(localStorage.getItem("loginData")!=null){
             for(var i=0 ;i<logincontainer.length;i++){
             
                 if(logincontainer[i].email.includes(current)){
+
+
                     isCoprrect=true;
+
                     break;
     
                    
@@ -64,6 +67,7 @@ if(localStorage.getItem("loginData")!=null){
     
             if(isCoprrect==true){
                document.getElementById("exist").classList.remove("d-none")
+               document.getElementById("suss").classList.add("d-none")
             }else{
                 var loginData={
                     name:usernameInput.value,
@@ -74,6 +78,7 @@ if(localStorage.getItem("loginData")!=null){
                            
                    localStorage.setItem("loginData",JSON.stringify(logincontainer));
                    document.getElementById("suss").classList.remove("d-none")
+                   document.getElementById("exist").classList.add("d-none")
     
             }
     
