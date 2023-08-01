@@ -41,7 +41,7 @@ function testData(){
              logincontainer.push(loginData)
                     
             localStorage.setItem("loginData",JSON.stringify(logincontainer));
-            document.getElementById("suss").classList.remove("d-none")
+            // document.getElementById("suss").classList.remove("d-none")
    
       }else{
          for(var i=0 ;i<logincontainer.length;i++){
@@ -84,11 +84,11 @@ function testData(){
    
    
       
+      clear()
       
-   
 
    }
-   clear()
+   
   
       
 }
@@ -149,10 +149,12 @@ function testData(){
 function regexEmail(){
    var regex =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
    var text =emailInput.value;
+   var message =document.getElementById('suss')
    if (regex.test(text)==true){
       emailInput.classList.add("is-valid")
       emailInput.classList.remove("is-invalid")
       pattern.classList.add("d-none")
+      message.classList.remove('d-none')
       
       return true;
 
@@ -161,9 +163,13 @@ function regexEmail(){
       emailInput.classList.add("is-invalid")
       emailInput.classList.remove("is-valid")
       pattern.classList.remove("d-none")
+      message.classList.add('d-none')
       return false;
 
    }
+
+
+   clear()
 }
 
 

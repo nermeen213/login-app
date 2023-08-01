@@ -101,7 +101,7 @@ if(localStorage.getItem("loginData")!=null){
 
 
 function regexName(){
-    var regex = /^[a-zA-Z]{5}/
+    var regex = /^[a-zA-Z]{3}/
     var name =usernameInput.value;
     if(regex.test(name)==true){
         usernameInput.classList.add("is-valid")
@@ -139,6 +139,9 @@ function regexEmail(){
         return false;
 
     }
+
+
+    clear()
    
 }
 
